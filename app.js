@@ -3,6 +3,8 @@
 const Database = require('better-sqlite3')
 const axios = require("axios");
 
+const apiKey = process.env.API_KEY;
+
 const getWords = () => {
   const words = [];
 
@@ -36,7 +38,7 @@ const getDefinitions = async () => {
     method: 'GET',
     url: 'https://mashape-community-urban-dictionary.p.rapidapi.com/define',
     headers: {
-      'x-rapidapi-key': '6462f57ff1msh411b7dd96139ab3p137b3fjsna42eca8d77ff',
+      'x-rapidapi-key': apiKey,
       'x-rapidapi-host': 'mashape-community-urban-dictionary.p.rapidapi.com'
     }
   };
