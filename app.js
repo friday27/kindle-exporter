@@ -56,5 +56,3 @@ const getDefinitions = async () => {
     console.log("===========================================================");
   }
 };
-
-getDefinitions();
